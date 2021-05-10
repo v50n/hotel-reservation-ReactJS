@@ -1,0 +1,67 @@
+nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--darkGrey);
+}
+
+nav img{
+    padding: 0.5rem 2rem;
+}
+
+.toogle-icon{
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+.nav-menu{
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    transition: var(--mainTransition);
+    height: 0;
+    overflow: hidden;
+}
+
+.display-navMenu{
+    height: 100px;
+}
+
+.nav-item{
+    flex-basis: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--mainBlack);
+    letter-spacing: var(--mainSpacing);
+}
+
+.nav-item:hover{
+    color: var(--primaryColor)
+}
+
+@media screen and (min-width: 776px) {
+    .toogle-icon{
+        display: none;
+    }
+    .nav-menu{
+        flex-basis: 50%;
+        padding-right: 2rem;
+        justify-content: flex-end;
+        transition: none;
+        height: auto;
+    }
+    .nav-item{
+        flex-basis: auto;
+        margin-left: 2rem;
+    }
+}
+  @media screen and (min-width: 992px) {
+
+}
+

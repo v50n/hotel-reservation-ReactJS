@@ -1,0 +1,55 @@
+.defaultHero{
+    background: url(./../images/defaultBcg.jpeg) no-repeat center center fixed;
+    height: calc(100vh - 80px);
+    background-size: cover; /* cover full page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.HeroBanner{
+    background: var(--blackLight);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 5rem;
+}
+
+.HeroBanner hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--primaryColor);
+    width: 30%;
+}
+
+.banner-title{
+    color: var(--mainWhite);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    overflow: auto;
+}
+
+.HeroBanner p{
+    color: var(--mainWhite);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-banner{
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: var(--primaryColor);
+    border: 3px solid var(--primaryColor);
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.btn-banner:hover, .btn-banner:focus{
+    background-color: transparent;
+    color: var(--primaryColor);
+}

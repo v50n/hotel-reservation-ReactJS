@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 5rem;
+    padding: 3rem 1rem;
 }
 
 .HeroBanner hr {
@@ -30,6 +30,7 @@
     letter-spacing: 2px;
     font-size: 3rem;
     overflow: auto;
+    text-align: center;
 }
 
 .HeroBanner p{
@@ -37,6 +38,7 @@
     letter-spacing: 2px;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .btn-banner{
@@ -52,4 +54,15 @@
 .btn-banner:hover, .btn-banner:focus{
     background-color: transparent;
     color: var(--primaryColor);
+}
+
+@media screen and (min-width: 776px) {
+    .HeroBanner{
+        padding: 3rem 3rem;
+    }
+}
+  @media screen and (min-width: 992px) {
+    .HeroBanner{
+        padding: 3rem 5rem;
+    }
 }

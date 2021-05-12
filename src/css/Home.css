@@ -1,0 +1,123 @@
+.service-section{
+    padding-top: 3rem;
+    background-color: var(--darkGrey);
+    text-align: center;
+}
+
+
+.service-section hr, .featured-section hr{
+    width: 10%;
+    margin: auto;
+    border: 2px solid var(--primaryColor);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+
+.service-list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+.service-icon{
+    color: var(--primaryColor);
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-title{
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.featured-section{
+    padding-top: 3rem;
+    text-align: center;
+}
+.rooms-list{
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.roomDetail{
+    flex-basis: 30%;
+    box-shadow: var(--darkShadow);
+    position: relative;
+}
+
+.roomImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.roomImage:hover{
+    background-color: red;
+}
+
+.roomImage img{
+    width: 100%;
+    height: 100%;
+}
+.btn-features{
+    position: absolute;
+    padding: 1rem 1.4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+    cursor: pointer;
+}
+
+.btn-features:hover{
+    background-color: transparent;
+    color: var(--primaryColor);
+}
+
+.roomPrice{
+    width: 90px;
+    height: 50px;
+    background-color: black;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    top: 0;
+    border-bottom-right-radius: 10px;
+}
+
+.night{
+    font-size: 0.6rem;
+}
+
+.roomName{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    padding: 5px;
+    background-color: var(--darkGrey);
+}
+
+
+@media screen and (min-width: 776px) {
+    .service-detail{
+        flex-basis: 40%;
+    }
+}
+  @media screen and (min-width: 992px) {
+    .service-detail{
+        flex-basis: 20%;
+    }
+}

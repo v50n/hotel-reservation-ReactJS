@@ -52,25 +52,27 @@
 
 .roomDetail{
     flex-basis: 30%;
-    box-shadow: var(--darkShadow);
-    position: relative;
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+    /* box-shadow: var(--darkShadow); */
+    
 }
 
-.roomImage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.roomImage{ 
+    position:relative;
 }
-.roomImage:hover{
-    background-color: red;
-}
+
 
 .roomImage img{
     width: 100%;
-    height: 100%;
+    display: block;
 }
+
 .btn-features{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 1rem 1.4rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -78,6 +80,11 @@
     background-color: var(--primaryColor);
     border: 2px solid var(--primaryColor);
     cursor: pointer;
+    opacity: 0;
+    transition: var(--mainTransition);
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
 }
 
 .btn-features:hover{
@@ -97,6 +104,7 @@
     position: absolute;
     top: 0;
     border-bottom-right-radius: 10px;
+    transition: var(--mainTransition);
 }
 
 .night{
@@ -110,6 +118,20 @@
     background-color: var(--darkGrey);
 }
 
+.roomImage:hover{ 
+    background: rgba(0, 0, 0, 0.8);
+}
+.roomImage:hover img{ 
+    opacity: 0.5;
+}
+
+.roomImage:hover .roomPrice{ 
+    opacity: 0;
+}
+
+.roomImage:hover .btn-features{ 
+    opacity: 1;
+}
 
 @media screen and (min-width: 776px) {
     .service-detail{

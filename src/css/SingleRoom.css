@@ -1,0 +1,52 @@
+.SingleRoomContainer{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+
+.SingleRoomContainer .roomImgDetail{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    margin: 1rem auto;
+    gap: 2rem 2rem;
+}
+
+.roomImgDetail img{
+    width: 100%;
+}
+.singleRoomInfo{
+    display: grid;
+}
+
+.singleInfo{
+    margin-top: 2rem;
+}
+
+.singleInfo h1{
+    margin-bottom: 1rem;
+}
+
+.singleInfo p{
+    font-size: 1.1rem;
+}
+.singleInfo p{
+    padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 776px) {
+    .singleRoomInfo{
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem 2rem;
+    }
+    .singleExtra{
+        grid-column: 1/3;
+    }
+    .extraDetail{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+  @media screen and (min-width: 992px) {
+
+}

@@ -705,7 +705,7 @@ export default [
       id: "13"
     },
     fields: {
-      name: "presidential",
+      name: "presidential room",
       slug: "presidential-room",
       type: "presidential",
       price: 600,

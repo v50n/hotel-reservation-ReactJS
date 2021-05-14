@@ -1,4 +1,5 @@
-import './../css/Hero.css'
+import './../css/Hero.css';
+
 
 const Hero = ({style,children}) => {
     return(

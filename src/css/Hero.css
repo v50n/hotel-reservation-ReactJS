@@ -1,10 +1,13 @@
-.defaultHero{
-    background: url(./../images/defaultBcg.jpeg) no-repeat center center fixed;
-    height: calc(100vh - 80px);
+.defaultHero, .roomHero{
+    background: url(./../images/defaultBcg.jpeg) no-repeat center center;
+    min-height: calc(100vh - 57px);
     background-size: cover; /* cover full page*/
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.roomHero{
+    min-height: 60vh;
 }
 
 

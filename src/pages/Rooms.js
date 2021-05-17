@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import StyledHero from '../components/StyledHero';
 import HeroBanner from '../components/HeroBanner';
 import '../css/Rooms.css';
 import data from '../data';
+import RoomsCart from '../components/RoomsCart';
 
 const Rooms = () => {
+    
+    const [roomData, setRoomData] = useState(data);
+    const [roomType, setRoomType] = useState('all');
+    const [guess, setGuess] = useState(1);
+    const handleRoomTypeSelect = (e) =>{
+        setRoomType(e.target.value);
+    }
+    const handleGuessSelect = (e) =>{
+        setGuess(e.target.value);
+    }
+    useEffect(()=>{
+        console.log(roomType)
+        if(roomType === "all"){
+            setRoomData(data)
+        }else{
+            setRoomData(data.filter(val => val.fields.type === roomType)
+                            .filter(val => val.fields.capacity === guess))
+        }
 
+        console.log(roomData)
+    },[roomType])
     return (
         <div>
             <StyledHero>
@@ -20,7 +41,7 @@ const Rooms = () => {
                     <div className="form-filter">
                         <div className="form-group">
                             <label htmlFor="typeOfRoom">Room Type</label>
-                            <select name="typeOfRoom" id="typeOfRoom">
+                            <select value={roomType} onChange={handleRoomTypeSelect} name="typeOfRoom" id="typeOfRoom">
                                 <option value="all">all</option>
                                 <option value="single">single</option>
                                 <option value="double">double</option>
@@ -30,7 +51,7 @@ const Rooms = () => {
                         </div>
                         <div className="form-group">
                         <label htmlFor="guess">Guests</label>
-                            <select name="guess" id="guess">
+                            <select name="guess" id="guess" value={guess} onChange={handleGuessSelect}>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -58,17 +79,23 @@ const Rooms = () => {
                         <div className="form-group">
                             <div className="option">
                                 <input type="checkbox" id="breakfast" name="breakfast" />
-                                <label for="breakfast">Breakfast</label>
+                                <label htmlFor="breakfast">Breakfast</label>
                             </div>
 
                             <div className="option">
                                 <input type="checkbox" id="pets" name="pets" />
-                                <label for="pets">Pets</label>
+                                <label htmlFor="pets">Pets</label>
                             </div>
                         </div>
                     </div>
  
                 </form>
+
+                <div className="rooms-list rooms-list-search-page">
+                    {
+                        roomData.map((room,index) => <RoomsCart index={index} room={room} key={index} />)
+                    }
+                </div>
             </section>
         </div>
     )

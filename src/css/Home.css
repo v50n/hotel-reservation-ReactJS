@@ -111,6 +111,7 @@
 }
 
 .roomName{
+    text-align: center;
     text-transform: capitalize;
     letter-spacing: 2px;
     padding: 5px;
